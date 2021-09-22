@@ -50,7 +50,6 @@ public class HourAdapter extends RecyclerView.Adapter {
             url = "https://developer.accuweather.com/sites/default/files/0" + weather.getWeatherIcon() + "-s.png";
         }
         Glide.with(activity).load(url).into(vh.icon);
-
     }
 
     @Override

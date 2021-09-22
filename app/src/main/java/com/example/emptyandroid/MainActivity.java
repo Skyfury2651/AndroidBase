@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         tvTem = (TextView) findViewById(R.id.tvTem);
         tvStatus = (TextView) findViewById(R.id.tvStatus);
 
+        //init và gửi data vào Adapter ?
         getHours();
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -59,11 +60,11 @@ public class MainActivity extends AppCompatActivity {
                 if (response.body() == null) return;
 
                 List<Weather> weatherList = response.body();
-                HourAdapter adapter = new HourAdapter(MainActivity.this,weatherList);
+                HourAdapter adapter = new HourAdapter(MainActivity.this, weatherList);
                 rvHour.setAdapter(adapter);
 
                 Weather weather = weatherList.get(0);
-                tvTem.setText(weather.getTemperature().getValue().intValue()+"");
+                tvTem.setText(weather.getTemperature().getValue().intValue() + "");
                 tvStatus.setText(weather.getIconPharse());
             }
 
