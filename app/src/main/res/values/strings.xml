@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EmptyAndroid</string>
+    <string name="app_name">File</string>
     <string name="open_menu_message">open</string>
     <string name="close_menu_message">close</string>
 </resources>
